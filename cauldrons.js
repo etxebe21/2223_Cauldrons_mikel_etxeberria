@@ -1038,19 +1038,32 @@ const data = {
 // winterCauldrons();
 
 // 3.- Mostrar cantidad Cauldrons rotos separados por temporada
-function showDamaged()
+// function showDamaged()
+// {
+// 	for (var i = 0; i < data.cauldrons.length; ++i)
+// 	{
+// 		var result = data.cauldrons[i];
+// 		if (result.damaged = true)
+// 		{			
+// 			console.log(result);	
+// 		}
+// 	}
+// }
+// showDamaged();
+// 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
+
+function showColor()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-		var result = data.cauldrons[i];
-		if (result.damaged)
+		var result = data.cauldrons.color[i];
+		if (result.magic_description = naproxen)
 		{			
 			console.log(result);	
 		}
 	}
 }
-showDamaged();
-// 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
+showColor();
 
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
 
