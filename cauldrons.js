@@ -1092,7 +1092,7 @@ function showColor()
 		var colors = data.cauldrons.color[i];
 		if (colors.magic_description = naproxen)
 		{			
-			console.log(colors);	
+			console.log("Color de cauldrons Naproxen " + colors);	
 		}
 	}
 }
@@ -1106,7 +1106,7 @@ function woodCauldron()
 		var results = data.cauldrons[i];
 		if (results.type = wood && results.damaged == true)
 		{			
-			console.log(results);	
+			console.log("Cauldrons de madera rotos " + results);	
 		}
 	}
 }
@@ -1142,7 +1142,7 @@ function plexi()
         
 		if (result.name === Plexiglass)
 		{			
-            console.log(result);	
+            console.log("Cauldrons Plexiglass" + result);	
             
 		}
 	}
@@ -1152,6 +1152,19 @@ plexi();
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
+
+
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
+
+function posibleColors()
+{
+	for (var i = 0; i < data.cauldrons.length; ++i)
+	{
+        var result = data.cauldrons.color[i];
+        		
+            console.log("Posibles colores" + result);	
+	}
+}
+posibleColors();
 
