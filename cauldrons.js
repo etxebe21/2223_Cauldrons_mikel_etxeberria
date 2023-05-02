@@ -1032,7 +1032,7 @@ function winterCauldrons()
 	{
 		const winter = data.cauldrons.winter_seasson[i];
 	
-			console.log(winter);
+			console.log("Cauldrons de invierno" + winter);
 	}
 }
 winterCauldrons();
@@ -1152,7 +1152,18 @@ plexi();
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
-
+function orangeCauldrons()
+{
+	for (var i = 0; i < data.cauldrons.length; ++i)
+	{
+        var result = data.cauldrons.color[i];
+        if(result.damaged == false){
+        		
+            console.log("Cauldrons naranjas en buen estado" + result);	
+        }
+	}
+}
+orangeCauldrons();
 
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
