@@ -1016,9 +1016,9 @@ const data = {
 
 function cauldronsC()
 {
-	for (let i = 0; i < data.cauldrons.length; ++i)
+	for (let i = 0; i < data.length; ++i)
 	{
-		const cauldron = data.cauldrons[i];
+		const cauldron = data[i].cauldrons;
 		
 			console.log(cauldron);
 	}
@@ -1089,7 +1089,7 @@ function showColor()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-		var colors = data.cauldrons.color[i];
+		var colors = data.cauldrons[i].color;
 		if (colors.magic_description = naproxen)
 		{			
 			console.log("Color de cauldrons Naproxen " + colors);	
@@ -1118,8 +1118,8 @@ function brassi()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-        var description = data.cauldrons.magic_description[i];
-        var idCauldron  = data.cauldrons.id[i];
+        var description = data[i].cauldrons.magic_description;
+        var idCauldron  = data[i].cauldrons.id;
         
 		if (description.name === Brassicaceae && idCauldron.name === Brassicaceae)
 		{			
@@ -1138,7 +1138,7 @@ function plexi()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-        var result = data.cauldrons.winter_seasson[i];
+        var result = data.cauldrons[i].winter_seasson;
         
 		if (result.name === Plexiglass)
 		{			
@@ -1156,7 +1156,7 @@ function orangeCauldrons()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-        var result = data.cauldrons.color[i];
+        var result = data.cauldrons[i].color;
         if(result.damaged == false){
         		
             console.log("Cauldrons naranjas en buen estado" + result);	
@@ -1172,7 +1172,7 @@ function posibleColors()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-        var result = data.cauldrons.color[i];
+        var result = data.cauldrons[i].color;
         		
             console.log("Posibles colores" + result);	
 	}
