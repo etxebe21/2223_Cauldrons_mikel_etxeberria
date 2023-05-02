@@ -1037,6 +1037,17 @@ function winterCauldrons()
 }
 winterCauldrons();
 
+function springCauldrons()
+{
+	for (let i = 0; i < data.cauldrons.spring_seasson.length; ++i)
+	{
+		const spring = data.cauldrons.spring_seasson[i];
+	
+			console.log(spring);
+	}
+}
+springCauldrons();
+
 // 3.- Mostrar cantidad Cauldrons rotos separados por temporada
 function showDamaged()
 {
@@ -1100,6 +1111,22 @@ brassi();
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
+
+function plexi()
+{
+	for (var i = 0; i < data.cauldrons.length; ++i)
+	{
+        var result = data.cauldrons.winter_seasson[i];
+        
+		if (result.name === Plexiglass)
+		{			
+            console.log(result);	
+            
+		}
+	}
+}
+plexi();
+
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
