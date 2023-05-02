@@ -1014,58 +1014,70 @@ const data = {
 
 // 1.- Mostrar la cantidad total de cauldrons
 
-// function cauldronsC()
-// {
-// 	for (let i = 0; i < data.cauldrons.length; ++i)
-// 	{
-// 		const cauldron = cauldrons[i];
+function cauldronsC()
+{
+	for (let i = 0; i < data.cauldrons.length; ++i)
+	{
+		const cauldron = data.cauldrons[i];
 		
-// 			console.log(cauldron);
-// 	}
-// }
-// cauldronsC();
+			console.log(cauldron);
+	}
+}
+cauldronsC();
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
-// function winterCauldrons()
-// {
-// 	for (let i = 0; i < data.cauldrons.winter_seasson.length; ++i)
-// 	{
-// 		const winter = cauldrons.winter_seasson[i];
+function winterCauldrons()
+{
+	for (let i = 0; i < data.cauldrons.winter_seasson.length; ++i)
+	{
+		const winter = data.cauldrons.winter_seasson[i];
 	
-// 			console.log(winter);
-// 	}
-// }
-// winterCauldrons();
+			console.log(winter);
+	}
+}
+winterCauldrons();
 
 // 3.- Mostrar cantidad Cauldrons rotos separados por temporada
-// function showDamaged()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-// 		var result = data.cauldrons[i];
-// 		if (result.damaged = true)
-// 		{			
-// 			console.log(result);	
-// 		}
-// 	}
-// }
-// showDamaged();
+function showDamaged()
+{
+	for (var i = 0; i < data.cauldrons.length; ++i)
+	{
+		var result = data.cauldrons[i];
+		if (result.damaged == true)
+		{			
+			console.log(result);	
+		}
+	}
+}
+showDamaged();
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
 function showColor()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-		var result = data.cauldrons.color[i];
+		var colors = data.cauldrons.color[i];
 		if (result.magic_description = naproxen)
 		{			
-			console.log(result);	
+			console.log(colors);	
 		}
 	}
 }
 showColor();
 
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
+function woodCauldron()
+{
+	for (var i = 0; i < data.cauldrons.length; ++i)
+	{
+		var results = data.cauldrons.type[i];
+		if (result.type = wood && result.damaged == true)
+		{			
+			console.log(results);	
+		}
+	}
+}
+woodCauldron();
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
