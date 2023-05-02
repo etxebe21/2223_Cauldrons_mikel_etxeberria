@@ -1057,7 +1057,7 @@ function showColor()
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
 		var colors = data.cauldrons.color[i];
-		if (result.magic_description = naproxen)
+		if (colors.magic_description = naproxen)
 		{			
 			console.log(colors);	
 		}
@@ -1070,8 +1070,8 @@ function woodCauldron()
 {
 	for (var i = 0; i < data.cauldrons.length; ++i)
 	{
-		var results = data.cauldrons.type[i];
-		if (result.type = wood && result.damaged == true)
+		var results = data.cauldrons[i];
+		if (results.type = wood && results.damaged == true)
 		{			
 			console.log(results);	
 		}
@@ -1080,6 +1080,22 @@ function woodCauldron()
 woodCauldron();
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
+
+function brassi()
+{
+	for (var i = 0; i < data.cauldrons.length; ++i)
+	{
+        var description = data.cauldrons.magic_description[i];
+        var idCauldron  = data.cauldrons.id[i];
+        
+		if (description.name === Brassicaceae && idCauldron.name === Brassicaceae)
+		{			
+            console.log(description);	
+            console.log(idCauldron);
+		}
+	}
+}
+brassi();
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
