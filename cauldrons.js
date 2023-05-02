@@ -1048,6 +1048,28 @@ function springCauldrons()
 }
 springCauldrons();
 
+function summerCauldrons()
+{
+	for (let i = 0; i < data.cauldrons.summer_seasson.length; ++i)
+	{
+		const summer = data.cauldrons.summer_seasson[i];
+	
+			console.log(summer);
+	}
+}
+summerCauldrons();
+
+function autumnCauldrons()
+{
+	for (let i = 0; i < data.cauldrons.autumn_seasson.length; ++i)
+	{
+		const autumn = data.cauldrons.autumn_seasson[i];
+	
+			console.log(autumn);
+	}
+}
+autumnCauldrons();
+
 // 3.- Mostrar cantidad Cauldrons rotos separados por temporada
 function showDamaged()
 {
