@@ -1109,18 +1109,53 @@ showSpringDamaged();
 
 // // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
-// function showColor()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-// 		var colors = data.cauldrons[i].color;
-// 		if (colors.magic_description = naproxen)
-// 		{			
-// 			console.log("Color de cauldrons Naproxen " + colors);	
-// 		}
-// 	}
-// }
-// showColor();
+function showColorWinter()
+{
+	for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+    {
+		if(data.cauldrons.winter_seasson[i].magic_description == "Naproxen")
+        {
+            console.log("Color de cauldrons Naproxen de Winter_seasson: " + data.cauldrons.winter_seasson[i].color);
+        }
+    }
+}
+showColorWinter();
+
+function showColorSummer()
+{
+	for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+    {
+		if(data.cauldrons.summer_seasson[i].magic_description == "Naproxen")
+        {
+            console.log("Color de cauldrons Naproxen de Summer_seasson: " + data.cauldrons.summer_seasson[i].color);
+        }
+    }
+}
+showColorSummer();
+
+function showColorSpring()
+{
+	for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+    {
+		if(data.cauldrons.spring_seasson[i].magic_description == "Naproxen")
+        {
+            console.log("Color de cauldrons Naproxen de Spring_seasson: " + data.cauldrons.spring_seasson[i].color);
+        }
+    }
+}
+showColorSpring();
+
+function showColorAutumn()
+{
+	for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+    {
+		if(data.cauldrons.autumn_seasson[i].magic_description == "Naproxen")
+        {
+            console.log("Color de cauldrons Naproxen de Autumn_seasson: " + data.cauldrons.autumn_seasson[i].color);
+        }
+    }
+}
+showColorAutumn();
 
 // // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
 // function woodCauldron()
