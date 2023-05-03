@@ -1025,49 +1025,39 @@ function cauldronsC()
 cauldronsC();
 
 // // 2- Mostrar la cantidad de cauldrons separados por temporada
-// function winterCauldrons()
-// {
-// 	for (let i = 0; i < data.cauldrons.winter_seasson.length; ++i)
-// 	{
-// 		const winter = data.cauldrons.winter_seasson[i];
+function winterCauldrons()
+{
+	let winter = data.cauldrons.winter_seasson.length;
 	
-// 			console.log("Cauldrons de invierno" + winter);
-// 	}
-// }
-// winterCauldrons();
+	console.log("Cauldrons de invierno: " + winter);
+}
+winterCauldrons();
 
-// function springCauldrons()
-// {
-// 	for (let i = 0; i < data.cauldrons.spring_seasson.length; ++i)
-// 	{
-// 		const spring = data.cauldrons.spring_seasson[i];
+function springCauldrons()
+{
+	let spring = data.cauldrons.spring_seasson.length;
 	
-// 			console.log(spring);
-// 	}
-// }
-// springCauldrons();
+		
+			console.log("Cauldrons spring: " + spring);
+	
+}
+springCauldrons();
 
-// function summerCauldrons()
-// {
-// 	for (let i = 0; i < data.cauldrons.summer_seasson.length; ++i)
-// 	{
-// 		const summer = data.cauldrons.summer_seasson[i];
+function summerCauldrons()
+{
+	 let summer = data.cauldrons.summer_seasson.length;
 	
-// 			console.log(summer);
-// 	}
-// }
-// summerCauldrons();
+		console.log("Cauldrons summer: " + summer)
+}
+summerCauldrons();
 
-// function autumnCauldrons()
-// {
-// 	for (let i = 0; i < data.cauldrons.autumn_seasson.length; ++i)
-// 	{
-// 		const autumn = data.cauldrons.autumn_seasson[i];
-	
-// 			console.log(autumn);
-// 	}
-// }
-// autumnCauldrons();
+function autumnCauldrons()
+{
+	 let autumn = data.cauldrons.autumn_seasson.length; 
+
+			console.log("Cauldrons autumn: " + autumn);
+}
+autumnCauldrons();
 
 // // 3.- Mostrar cantidad Cauldrons rotos separados por temporada
 // function showDamaged()
