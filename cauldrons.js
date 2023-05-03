@@ -1029,16 +1029,15 @@ function winterCauldrons()
 {
 	let winter = data.cauldrons.winter_seasson.length;
 	
-	console.log("Cauldrons de invierno: " + winter);
+	    console.log("Cauldrons de invierno: " + winter);
 }
 winterCauldrons();
 
 function springCauldrons()
 {
 	let spring = data.cauldrons.spring_seasson.length;
-	
 		
-			console.log("Cauldrons spring: " + spring);
+	    console.log("Cauldrons spring: " + spring);
 	
 }
 springCauldrons();
@@ -1055,23 +1054,59 @@ function autumnCauldrons()
 {
 	 let autumn = data.cauldrons.autumn_seasson.length; 
 
-			console.log("Cauldrons autumn: " + autumn);
+		console.log("Cauldrons autumn: " + autumn);
 }
 autumnCauldrons();
 
 // // 3.- Mostrar cantidad Cauldrons rotos separados por temporada
-// function showDamaged()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-// 		var result = data.cauldrons[i];
-// 		if (result.damaged == true)
-// 		{			
-// 			console.log(result);	
-// 		}
-// 	}
-// }
-// showDamaged();
+function showSummerDamaged()
+{
+    let result = 0;
+	for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+	{
+		if(data.cauldrons.summer_seasson[i].damaged == true)
+         result++;	
+	}
+     console.log("Cauldrons rotos de summer_seasson: " + result);
+}
+showSummerDamaged();
+
+function showWinterDamaged()
+{
+    let result = 0;
+	for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+	{
+		if(data.cauldrons.winter_seasson[i].damaged == true)
+         result++;	
+	}
+     console.log("Cauldrons rotos de winter_seasson: " + result);
+}
+showWinterDamaged();
+
+function showAutumnDamaged()
+{
+    let result = 0;
+	for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+	{
+		if(data.cauldrons.autumn_seasson[i].damaged == true)
+         result++;	
+	}
+     console.log("Cauldrons rotos de autumn_seasson: " + result);
+}
+showAutumnDamaged();
+
+function showSpringDamaged()
+{
+    let result = 0;
+	for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+	{
+		if(data.cauldrons.spring_seasson[i].damaged == true)
+         result++;	
+	}
+     console.log("Cauldrons rotos de spring_seasson: " + result);
+}
+showSpringDamaged();
+
 // // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
 // function showColor()
