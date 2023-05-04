@@ -1269,6 +1269,77 @@ function brassiAutumn()
 brassiAutumn();
 
 // // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
+function porcentajeWinter()
+{
+    let result = 0;
+    for(let i = 0; i <  data.cauldrons.winter_seasson.length; i++)
+    {
+        if(data.cauldrons.winter_seasson[i].damaged == true)
+        {
+            result++;
+        }
+    }
+    console.log("Cauldrons rotos en winter_seasson: " + result);
+    var porcentaje = (result/data.cauldrons.winter_seasson.length)*100;
+    console.log("Porcentaje cauldrons dañados en winter_seasson: " + porcentaje);
+    var porcentaje2 = Math.round(porcentaje);
+    console.log("Porcentaje cauldrons dañados en winter_seasson: " + porcentaje2);
+}
+porcentajeWinter();
+
+function porcentajeAutumn()
+{
+    let result = 0;
+    for(let i = 0; i <  data.cauldrons.autumn_seasson.length; i++)
+    {
+        if(data.cauldrons.autumn_seasson[i].damaged == true)
+        {
+            result++;
+        }
+    }
+    console.log("Cauldrons rotos en autumn_seasson: " + result);
+    var porcentaje = (result/data.cauldrons.autumn_seasson.length)*100;
+    console.log("Porcentaje cauldrons dañados en autumn_seasson: " + porcentaje);
+    var porcentaje2 = Math.round(porcentaje);
+    console.log("Porcentaje cauldrons dañados en autumn_seasson: " + porcentaje2);
+}
+porcentajeAutumn();
+
+function porcentajeSpring()
+{
+    let result = 0;
+    for(let i = 0; i <  data.cauldrons.spring_seasson.length; i++)
+    {
+        if(data.cauldrons.spring_seasson[i].damaged == true)
+        {
+            result++;
+        }
+    }
+    console.log("Cauldrons rotos en spring_seasson: " + result);
+    var porcentaje = (result/data.cauldrons.spring_seasson.length)*100;
+    console.log("Porcentaje cauldrons dañados en spring_seasson: " + porcentaje);
+    var porcentaje2 = Math.round(porcentaje);
+    console.log("Porcentaje cauldrons dañados en spring_seasson: " + porcentaje2);
+}
+porcentajeSpring();
+
+function porcentajeSummer()
+{
+    let result = 0;
+    for(let i = 0; i <  data.cauldrons.summer_seasson.length; i++)
+    {
+        if(data.cauldrons.summer_seasson[i].damaged == true)
+        {
+            result++;
+        }
+    }
+    console.log("Cauldrons rotos en summer_seasson: " + result);
+    var porcentaje = (result/data.cauldrons.summer_seasson.length)*100;
+    console.log("Porcentaje cauldrons dañados en summer_seasson: " + porcentaje);
+    var porcentaje2 = Math.round(porcentaje);
+    console.log("Porcentaje cauldrons dañados en summer_seasson: " + porcentaje2);
+}
+porcentajeSummer();
 
 // // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
