@@ -1169,7 +1169,7 @@ function woodAutumnCauldron()
 			// console.log("Cauldrons de madera rotos " + data.cauldrons.autumn_seasson[i].damaged + data.cauldrons.autumn_seasson[i].type);	
 		}
 	}
-    console.log("Cauldrons rotos en Autumn_seasson: " + result1);
+    console.log("Cauldrons rotos de madera en Autumn_seasson: " + result1);
 }
 woodAutumnCauldron();
 
@@ -1184,7 +1184,7 @@ function woodSummerCauldron()
 			// console.log("Cauldrons de madera rotos " + data.cauldrons.summer_seasson[i].damaged + data.cauldrons.summer_seasson[i].type);	
 		}
 	}
-    console.log("Cauldrons rotos en Summer_seasson: " + result2);
+    console.log("Cauldrons rotos de madera en Summer_seasson: " + result2);
 }
 woodSummerCauldron();
 
@@ -1199,7 +1199,7 @@ function woodSpringCauldron()
 			// console.log("Cauldrons de madera rotos " + data.cauldrons.spring_seasson[i].damaged + data.cauldrons.spring_seasson[i].type);	
 		}
 	}
-    console.log("Cauldrons rotos en Spring_seasson: " + result3);
+    console.log("Cauldrons rotos de madera en Spring_seasson: " + result3);
 }
 woodSpringCauldron();
 
@@ -1214,7 +1214,7 @@ function woodWinterCauldron()
 			// console.log("Cauldrons de madera rotos " + data.cauldrons.winter_seasson[i].damaged + data.cauldrons.winter_seasson[i].type);	
 		}
 	}
-    console.log("Cauldrons rotos en Winter_seasson: " + result4);
+    console.log("Cauldrons rotos de madera en Winter_seasson: " + result4);
 }
 woodWinterCauldron();
 
