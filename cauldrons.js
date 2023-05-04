@@ -1426,14 +1426,55 @@ orangeAutumnCauldrons();
 // // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
 
-// function posibleColors()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-//         var result = data.cauldrons[i].color;
-        		
-//             console.log("Posibles colores" + result);	
-// 	}
-// }
-// posibleColors();
+function posibleColors()
+{
+    const coloresWinter = [];
 
+    for(var i = 0; i < data.cauldrons.winter_seasson.length; i++) 
+    {
+        const colores = data.cauldrons.winter_seasson[i].color;
+ 
+        if (!coloresWinter.includes(data.cauldrons.winter_seasson[i].color)) 
+        {
+            coloresWinter.push(colores);
+        }
+    }
+    console.log("Posibles colores de winter_seasson: " + coloresWinter);
+    
+    const coloresSpring = [];
+    for(var i = 0; i < data.cauldrons.spring_seasson.length; i++) 
+    {
+        const colores = data.cauldrons.spring_seasson[i].color;
+ 
+        if (!coloresSpring.includes(data.cauldrons.spring_seasson[i].color)) 
+        {
+            coloresSpring.push(colores);
+        }
+    }
+    console.log("Posibles colores de spring_seasson: " + coloresSpring);
+
+    const coloresSummer = [];
+    for(var i = 0; i < data.cauldrons.summer_seasson.length; i++) 
+    {
+        const colores = data.cauldrons.summer_seasson[i].color;
+ 
+        if (!coloresSummer.includes(data.cauldrons.summer_seasson[i].color)) 
+        {
+            coloresSummer.push(colores);
+        }
+    }
+    console.log("Posibles colores de summer_seasson: " + coloresSummer);
+
+    const coloresAutumn = [];
+    for(var i = 0; i < data.cauldrons.autumn_seasson.length; i++) 
+    {
+        const colores = data.cauldrons.autumn_seasson[i].color;
+ 
+        if (!coloresAutumn.includes(data.cauldrons.autumn_seasson[i].color)) 
+        {
+            coloresAutumn.push(colores);
+        }
+    }
+    console.log("Posibles colores de autumn_seasson: " + coloresAutumn);
+}
+posibleColors();
