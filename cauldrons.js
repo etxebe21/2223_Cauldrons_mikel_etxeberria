@@ -1272,20 +1272,23 @@ brassiAutumn();
 
 // // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
-// function plexi()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-//         var result = data.cauldrons[i].winter_seasson;
-        
-// 		if (result.name === Plexiglass)
-// 		{			
-//             console.log("Cauldrons Plexiglass" + result);	
-            
-// 		}
-// 	}
-// }
-// plexi();
+function plexi()
+{
+    let result = 0;
+	for (let i = 0; i < data.cauldrons.winter_seasson.length; ++i)
+    {    
+		if (data.cauldrons.winter_seasson[i].type == "Plexiglass")
+		{			
+            result++;
+		}
+    }
+    console.log("Cauldrons Plexiglass en winter_seasson: " + result);	
+    var porcentaje = (result / data.cauldrons.winter_seasson.length)*100;
+    console.log("Porcentaje de cauldrons Plexiglass en winter_seasson: " + porcentaje);
+    var porcentaje2 = Math.round(porcentaje);
+    console.log("Porcentaje de cauldrons Plexiglass en winter_seasson: " + porcentaje2);
+}
+plexi();
 
 
 // // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
