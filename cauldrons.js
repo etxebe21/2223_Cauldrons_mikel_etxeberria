@@ -1220,21 +1220,53 @@ woodWinterCauldron();
 
 // // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
-// function brassi()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-//         var description = data[i].cauldrons.magic_description;
-//         var idCauldron  = data[i].cauldrons.id;
-        
-// 		if (description.name === Brassicaceae && idCauldron.name === Brassicaceae)
-// 		{			
-//             console.log(description);	
-//             console.log(idCauldron);
-// 		}
-// 	}
-// }
-// brassi();
+function brassiWinter()
+{
+    for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+    {  
+		if (data.cauldrons.winter_seasson[i].name == "Brassicaceae")
+		{			
+            console.log("Id y magic_description de los cauldrons Brassicaceae de winter_seasson: " + data.cauldrons.winter_seasson[i].id + "  " + data.cauldrons.winter_seasson[i].magic_description);	 
+		}
+	}
+}
+brassiWinter();
+
+function brassiSummer()
+{
+    for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+    {  
+		if (data.cauldrons.summer_seasson[i].name == "Brassicaceae")
+		{			
+            console.log("Id y magic_description de los cauldrons Brassicaceae de summer_seasson: " + data.cauldrons.summer_seasson[i].id + "  " + data.cauldrons.summer_seasson[i].magic_description);	 
+		}
+	}
+}
+brassiSummer();
+
+function brassiSpring()
+{
+    for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+    {  
+		if (data.cauldrons.spring_seasson[i].name == "Brassicaceae")
+		{			
+            console.log("Id y magic_description de los cauldrons Brassicaceae de spring_seasson: " + data.cauldrons.spring_seasson[i].id + "  " + data.cauldrons.spring_seasson[i].magic_description);	 
+		}
+	}
+}
+brassiSpring();
+
+function brassiAutumn()
+{
+    for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+    {  
+		if (data.cauldrons.autumn_seasson[i].name == "Brassicaceae")
+		{			
+            console.log("Id y magic_description de los cauldrons Brassicaceae de autumn_seasson: " + data.cauldrons.autumn_seasson[i].id + "  " + data.cauldrons.autumn_seasson[i].magic_description);	 
+		}
+	}
+}
+brassiAutumn();
 
 // // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
@@ -1258,18 +1290,7 @@ woodWinterCauldron();
 
 // // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
-// function orangeCauldrons()
-// {
-// 	for (var i = 0; i < data.cauldrons.length; ++i)
-// 	{
-//         var result = data.cauldrons[i].color;
-//         if(result.damaged == false){
-        		
-//             console.log("Cauldrons naranjas en buen estado" + result);	
-//         }
-// 	}
-// }
-// orangeCauldrons();
+
 
 // // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
