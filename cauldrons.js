@@ -1289,7 +1289,64 @@ brassiAutumn();
 
 
 // // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
+function orangeWinterCauldrons()
+{
+    let total = 0;
+ for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+ {
+        if(data.cauldrons.winter_seasson[i].color == "orange" || data.cauldrons.winter_seasson[i].damaged == false)
+        {    
+            total++; 
+        }
+    }
+    console.log("Cauldrons naranjas en buen estado de winter_seasson: " + total);
+}
+orangeWinterCauldrons();
 
+
+function orangeSummerCauldrons()
+{
+    let total = 0;
+ for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+ {
+        if(data.cauldrons.summer_seasson[i].color == "orange" || data.cauldrons.summer_seasson[i].damaged == false)
+        {    
+            total++; 
+        }
+    }
+    console.log("Cauldrons naranjas en buen estado de summer_seasson: " + total);
+}
+orangeSummerCauldrons();
+
+
+function orangeSpringCauldrons()
+{
+    let total = 0;
+ for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+ {
+        if(data.cauldrons.spring_seasson[i].color == "orange" || data.cauldrons.spring_seasson[i].damaged == false)
+        {    
+            total++; 
+        }
+    }
+    console.log("Cauldrons naranjas en buen estado de spring_seasson: " + total);
+}
+orangeSpringCauldrons();
+
+
+function orangeAutumnCauldrons()
+{
+    let total = 0;
+ for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+ {
+        if(data.cauldrons.autumn_seasson[i].color == "orange" || data.cauldrons.autumn_seasson[i].damaged == false)
+        {    
+            total++; 
+        }
+    }
+    console.log("Cauldrons naranjas en buen estado de autumn_seasson: " + total);
+}
+orangeAutumnCauldrons();
 
 
 // // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
