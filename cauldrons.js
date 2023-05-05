@@ -1011,6 +1011,8 @@ const data = {
     }
 }
 
+const cauldron = data.cauldrons.winter_seasson.concat(data.cauldrons.spring_seasson, data.cauldrons.summer_seasson, data.cauldrons.autumn_seasson);
+console.log(cauldron);
 
 // 1.- Mostrar la cantidad total de cauldrons
 
@@ -1116,387 +1118,351 @@ showSpringDamaged();
 
 function showColorWinter()
 {
-	for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+    console.log("4.- Mostrar el color de los cauldron con magic_description Naproxen");
+	for (let i = 0; i < cauldron.length; i++)
     {
-		if(data.cauldrons.winter_seasson[i].magic_description == "Naproxen")
+		if(cauldron[i].magic_description == "Naproxen")
         {
-            console.log("4.- Mostrar el color de los cauldron con magic_description Naproxen");
-            console.log("Color de cauldrons Naproxen de Winter_seasson: " + data.cauldrons.winter_seasson[i].color);
+            console.log("Color de cauldrons Naproxen : " + cauldron[i].color);
         }
     }
 }
 showColorWinter();
 
-function showColorSummer()
-{
-	for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
-    {
-		if(data.cauldrons.summer_seasson[i].magic_description == "Naproxen")
-        {
-            console.log("Color de cauldrons Naproxen de Summer_seasson: " + data.cauldrons.summer_seasson[i].color);
-        }
-    }
-}
-showColorSummer();
 
-function showColorSpring()
-{
-	for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
-    {
-		if(data.cauldrons.spring_seasson[i].magic_description == "Naproxen")
-        {
-            console.log("Color de cauldrons Naproxen de Spring_seasson: " + data.cauldrons.spring_seasson[i].color);
-        }
-    }
-}
-showColorSpring();
+// // // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
+// function brokenWoodCauldron()
+// {
+//     let result1 = 0;
+// 	for (var i = 0; i < data.cauldrons.autumn_seasson.length; ++i)
+// 	{
+// 		if (data.cauldrons.autumn_seasson[i].type == "Wood" && data.cauldrons.autumn_seasson[i].damaged == true)
+// 		{		
+//             result1++;	
+// 			// console.log("Cauldrons de madera rotos " + data.cauldrons.autumn_seasson[i].damaged + data.cauldrons.autumn_seasson[i].type);	
+// 		}
+// 	}
+//     console.log("5.- Mostrar el total de cauldrons de madera wood rotos, suma de todas las temporadas");
+//     console.log("Cauldrons rotos de madera en Autumn_seasson: " + result1);
 
-function showColorAutumn()
-{
-	for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
-    {
-		if(data.cauldrons.autumn_seasson[i].magic_description == "Naproxen")
-        {
-            console.log("Color de cauldrons Naproxen de Autumn_seasson: " + data.cauldrons.autumn_seasson[i].color);
-            console.log("////////////////////////////////////////");
-        }
-    }
-}
-showColorAutumn();
+//     let result2 = 0;
+// 	for (var i = 0; i < data.cauldrons.summer_seasson.length; ++i)
+// 	{
+// 		if (data.cauldrons.summer_seasson[i].type == "Wood" && data.cauldrons.summer_seasson[i].damaged == true)
+// 		{		
+//             result2++;	
+// 			// console.log("Cauldrons de madera rotos " + data.cauldrons.summer_seasson[i].damaged + data.cauldrons.summer_seasson[i].type);	
+// 		}
+// 	}
+//     console.log("Cauldrons rotos de madera en Summer_seasson: " + result2);
 
-// // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
-function brokenWoodCauldron()
-{
-    let result1 = 0;
-	for (var i = 0; i < data.cauldrons.autumn_seasson.length; ++i)
-	{
-		if (data.cauldrons.autumn_seasson[i].type == "Wood" && data.cauldrons.autumn_seasson[i].damaged == true)
-		{		
-            result1++;	
-			// console.log("Cauldrons de madera rotos " + data.cauldrons.autumn_seasson[i].damaged + data.cauldrons.autumn_seasson[i].type);	
-		}
-	}
-    console.log("5.- Mostrar el total de cauldrons de madera wood rotos, suma de todas las temporadas");
-    console.log("Cauldrons rotos de madera en Autumn_seasson: " + result1);
+//     let result3 = 0;
+// 	for (var i = 0; i < data.cauldrons.spring_seasson.length; ++i)
+// 	{
+// 		if (data.cauldrons.spring_seasson[i].type == "Wood" && data.cauldrons.spring_seasson[i].damaged == true)
+// 		{		
+//             result3++;	
+// 			// console.log("Cauldrons de madera rotos " + data.cauldrons.spring_seasson[i].damaged + data.cauldrons.spring_seasson[i].type);	
+// 		}
+// 	}
+//     console.log("Cauldrons rotos de madera en Spring_seasson: " + result3);
 
-    let result2 = 0;
-	for (var i = 0; i < data.cauldrons.summer_seasson.length; ++i)
-	{
-		if (data.cauldrons.summer_seasson[i].type == "Wood" && data.cauldrons.summer_seasson[i].damaged == true)
-		{		
-            result2++;	
-			// console.log("Cauldrons de madera rotos " + data.cauldrons.summer_seasson[i].damaged + data.cauldrons.summer_seasson[i].type);	
-		}
-	}
-    console.log("Cauldrons rotos de madera en Summer_seasson: " + result2);
+//     let result4 = 0;
+// 	for (var i = 0; i < data.cauldrons.winter_seasson.length; ++i)
+// 	{
+// 		if (data.cauldrons.winter_seasson[i].type == "Wood" && data.cauldrons.winter_seasson[i].damaged == true)
+// 		{		
+//             result4++;	
+// 			// console.log("Cauldrons de madera rotos " + data.cauldrons.winter_seasson[i].damaged + data.cauldrons.winter_seasson[i].type);	
+// 		}
+// 	}
+//     console.log("Cauldrons rotos de madera en Winter_seasson: " + result4);
+//     let total = result1 + result2 + result3 + result4;
+//     console.log("Cauldrons rotos de madera en total" + total);
+//     console.log("///////////////////////////////////////");
+// }
+// brokenWoodCauldron();
 
-    let result3 = 0;
-	for (var i = 0; i < data.cauldrons.spring_seasson.length; ++i)
-	{
-		if (data.cauldrons.spring_seasson[i].type == "Wood" && data.cauldrons.spring_seasson[i].damaged == true)
-		{		
-            result3++;	
-			// console.log("Cauldrons de madera rotos " + data.cauldrons.spring_seasson[i].damaged + data.cauldrons.spring_seasson[i].type);	
-		}
-	}
-    console.log("Cauldrons rotos de madera en Spring_seasson: " + result3);
+// // // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
-    let result4 = 0;
-	for (var i = 0; i < data.cauldrons.winter_seasson.length; ++i)
-	{
-		if (data.cauldrons.winter_seasson[i].type == "Wood" && data.cauldrons.winter_seasson[i].damaged == true)
-		{		
-            result4++;	
-			// console.log("Cauldrons de madera rotos " + data.cauldrons.winter_seasson[i].damaged + data.cauldrons.winter_seasson[i].type);	
-		}
-	}
-    console.log("Cauldrons rotos de madera en Winter_seasson: " + result4);
-    let total = result1 + result2 + result3 + result4;
-    console.log("Cauldrons rotos de madera en total" + total);
-    console.log("///////////////////////////////////////");
-}
-brokenWoodCauldron();
+// function brassiWinter()
+// {
+//     console.log("6.- Mostrar la Id y magic_description de los cauldron llamados Brassicaceae");		
+//     for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+//     {  
+// 		if (data.cauldrons.winter_seasson[i].name == "Brassicaceae")
+// 		{	
+//             console.log("Id y magic_description de los cauldrons Brassicaceae de winter_seasson: " + data.cauldrons.winter_seasson[i].id + "  " + data.cauldrons.winter_seasson[i].magic_description);	 
+// 		}
+// 	}
+// }
+// brassiWinter();
 
-// // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
+// function brassiSummer()
+// {
+//     for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+//     {  
+// 		if (data.cauldrons.summer_seasson[i].name == "Brassicaceae")
+// 		{			
+//             console.log("Id y magic_description de los cauldrons Brassicaceae de summer_seasson: " + data.cauldrons.summer_seasson[i].id + "  " + data.cauldrons.summer_seasson[i].magic_description);	 
+// 		}
+// 	}
+// }
+// brassiSummer();
 
-function brassiWinter()
-{
-    console.log("6.- Mostrar la Id y magic_description de los cauldron llamados Brassicaceae");		
-    for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
-    {  
-		if (data.cauldrons.winter_seasson[i].name == "Brassicaceae")
-		{	
-            console.log("Id y magic_description de los cauldrons Brassicaceae de winter_seasson: " + data.cauldrons.winter_seasson[i].id + "  " + data.cauldrons.winter_seasson[i].magic_description);	 
-		}
-	}
-}
-brassiWinter();
+// function brassiSpring()
+// {
+//     for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+//     {  
+// 		if (data.cauldrons.spring_seasson[i].name == "Brassicaceae")
+// 		{			
+//             console.log("Id y magic_description de los cauldrons Brassicaceae de spring_seasson: " + data.cauldrons.spring_seasson[i].id + "  " + data.cauldrons.spring_seasson[i].magic_description);	 
+// 		}
+// 	}
+// }
+// brassiSpring();
 
-function brassiSummer()
-{
-    for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
-    {  
-		if (data.cauldrons.summer_seasson[i].name == "Brassicaceae")
-		{			
-            console.log("Id y magic_description de los cauldrons Brassicaceae de summer_seasson: " + data.cauldrons.summer_seasson[i].id + "  " + data.cauldrons.summer_seasson[i].magic_description);	 
-		}
-	}
-}
-brassiSummer();
+// function brassiAutumn()
+// {
+//     for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+//     {  
+// 		if (data.cauldrons.autumn_seasson[i].name == "Brassicaceae")
+// 		{			
+//             console.log("Id y magic_description de los cauldrons Brassicaceae de autumn_seasson: " + data.cauldrons.autumn_seasson[i].id + "  " + data.cauldrons.autumn_seasson[i].magic_description);	 
+//         }
+// 	}
+//     console.log("//////////////////////////////////");
+// }
+// brassiAutumn();
 
-function brassiSpring()
-{
-    for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
-    {  
-		if (data.cauldrons.spring_seasson[i].name == "Brassicaceae")
-		{			
-            console.log("Id y magic_description de los cauldrons Brassicaceae de spring_seasson: " + data.cauldrons.spring_seasson[i].id + "  " + data.cauldrons.spring_seasson[i].magic_description);	 
-		}
-	}
-}
-brassiSpring();
+// // // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
+// function porcentajeWinter()
+// {
+//     let result = 0;
+//     for(let i = 0; i <  data.cauldrons.winter_seasson.length; i++)
+//     {
+//         if(data.cauldrons.winter_seasson[i].damaged == true)
+//         {
+//             result++;
+//         }
+//     }
+//     console.log("7.- Mostrar el porcentaje de cauldrons dañados separados por temporada");
+//     console.log("Cauldrons rotos en winter_seasson: " + result);
+//     var porcentaje = (result/data.cauldrons.winter_seasson.length)*100;
+//     console.log("Porcentaje cauldrons dañados en winter_seasson: " + porcentaje);
+//     var porcentaje2 = Math.round(porcentaje);
+//     console.log("Porcentaje cauldrons dañados en winter_seasson: " + porcentaje2);
+// }
+// porcentajeWinter();
 
-function brassiAutumn()
-{
-    for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
-    {  
-		if (data.cauldrons.autumn_seasson[i].name == "Brassicaceae")
-		{			
-            console.log("Id y magic_description de los cauldrons Brassicaceae de autumn_seasson: " + data.cauldrons.autumn_seasson[i].id + "  " + data.cauldrons.autumn_seasson[i].magic_description);	 
-        }
-	}
-    console.log("//////////////////////////////////");
-}
-brassiAutumn();
+// function porcentajeAutumn()
+// {
+//     let result = 0;
+//     for(let i = 0; i <  data.cauldrons.autumn_seasson.length; i++)
+//     {
+//         if(data.cauldrons.autumn_seasson[i].damaged == true)
+//         {
+//             result++;
+//         }
+//     }
+//     console.log("Cauldrons rotos en autumn_seasson: " + result);
+//     var porcentaje = (result/data.cauldrons.autumn_seasson.length)*100;
+//     console.log("Porcentaje cauldrons dañados en autumn_seasson: " + porcentaje);
+//     var porcentaje2 = Math.round(porcentaje);
+//     console.log("Porcentaje cauldrons dañados en autumn_seasson: " + porcentaje2);
+// }
+// porcentajeAutumn();
 
-// // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
-function porcentajeWinter()
-{
-    let result = 0;
-    for(let i = 0; i <  data.cauldrons.winter_seasson.length; i++)
-    {
-        if(data.cauldrons.winter_seasson[i].damaged == true)
-        {
-            result++;
-        }
-    }
-    console.log("7.- Mostrar el porcentaje de cauldrons dañados separados por temporada");
-    console.log("Cauldrons rotos en winter_seasson: " + result);
-    var porcentaje = (result/data.cauldrons.winter_seasson.length)*100;
-    console.log("Porcentaje cauldrons dañados en winter_seasson: " + porcentaje);
-    var porcentaje2 = Math.round(porcentaje);
-    console.log("Porcentaje cauldrons dañados en winter_seasson: " + porcentaje2);
-}
-porcentajeWinter();
+// function porcentajeSpring()
+// {
+//     let result = 0;
+//     for(let i = 0; i <  data.cauldrons.spring_seasson.length; i++)
+//     {
+//         if(data.cauldrons.spring_seasson[i].damaged == true)
+//         {
+//             result++;
+//         }
+//     }
+//     console.log("Cauldrons rotos en spring_seasson: " + result);
+//     var porcentaje = (result/data.cauldrons.spring_seasson.length)*100;
+//     console.log("Porcentaje cauldrons dañados en spring_seasson: " + porcentaje);
+//     var porcentaje2 = Math.round(porcentaje);
+//     console.log("Porcentaje cauldrons dañados en spring_seasson: " + porcentaje2);
+// }
+// porcentajeSpring();
 
-function porcentajeAutumn()
-{
-    let result = 0;
-    for(let i = 0; i <  data.cauldrons.autumn_seasson.length; i++)
-    {
-        if(data.cauldrons.autumn_seasson[i].damaged == true)
-        {
-            result++;
-        }
-    }
-    console.log("Cauldrons rotos en autumn_seasson: " + result);
-    var porcentaje = (result/data.cauldrons.autumn_seasson.length)*100;
-    console.log("Porcentaje cauldrons dañados en autumn_seasson: " + porcentaje);
-    var porcentaje2 = Math.round(porcentaje);
-    console.log("Porcentaje cauldrons dañados en autumn_seasson: " + porcentaje2);
-}
-porcentajeAutumn();
+// function porcentajeSummer()
+// {
+//     let result = 0;
+//     for(let i = 0; i <  data.cauldrons.summer_seasson.length; i++)
+//     {
+//         if(data.cauldrons.summer_seasson[i].damaged == true)
+//         {
+//             result++;
+//         }
+//     }
+//     console.log("Cauldrons rotos en summer_seasson: " + result);
+//     var porcentaje = (result/data.cauldrons.summer_seasson.length)*100;
+//     console.log("Porcentaje cauldrons dañados en summer_seasson: " + porcentaje);
+//     var porcentaje2 = Math.round(porcentaje);
+//     console.log("Porcentaje cauldrons dañados en summer_seasson: " + porcentaje2);
+//     console.log("//////////////////////////////");
+// }
+// porcentajeSummer();
 
-function porcentajeSpring()
-{
-    let result = 0;
-    for(let i = 0; i <  data.cauldrons.spring_seasson.length; i++)
-    {
-        if(data.cauldrons.spring_seasson[i].damaged == true)
-        {
-            result++;
-        }
-    }
-    console.log("Cauldrons rotos en spring_seasson: " + result);
-    var porcentaje = (result/data.cauldrons.spring_seasson.length)*100;
-    console.log("Porcentaje cauldrons dañados en spring_seasson: " + porcentaje);
-    var porcentaje2 = Math.round(porcentaje);
-    console.log("Porcentaje cauldrons dañados en spring_seasson: " + porcentaje2);
-}
-porcentajeSpring();
+// // // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
-function porcentajeSummer()
-{
-    let result = 0;
-    for(let i = 0; i <  data.cauldrons.summer_seasson.length; i++)
-    {
-        if(data.cauldrons.summer_seasson[i].damaged == true)
-        {
-            result++;
-        }
-    }
-    console.log("Cauldrons rotos en summer_seasson: " + result);
-    var porcentaje = (result/data.cauldrons.summer_seasson.length)*100;
-    console.log("Porcentaje cauldrons dañados en summer_seasson: " + porcentaje);
-    var porcentaje2 = Math.round(porcentaje);
-    console.log("Porcentaje cauldrons dañados en summer_seasson: " + porcentaje2);
-    console.log("//////////////////////////////");
-}
-porcentajeSummer();
-
-// // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
-
-function plexi()
-{
-    let result = 0;
-	for (let i = 0; i < data.cauldrons.winter_seasson.length; ++i)
-    {    
-		if (data.cauldrons.winter_seasson[i].type == "Plexiglass")
-		{			
-            result++;
-		}
-    }
-    console.log("8.- Mostrar el porcentaje de cauldrons de Plexiglass en winter_seasson");
-    console.log("Cauldrons Plexiglass en winter_seasson: " + result);	
-    var porcentaje = (result / data.cauldrons.winter_seasson.length)*100;
-    console.log("Porcentaje de cauldrons Plexiglass en winter_seasson: " + porcentaje);
-    var porcentaje2 = Math.round(porcentaje);
-    console.log("Porcentaje de cauldrons Plexiglass en winter_seasson: " + porcentaje2);
-    console.log("////////////////////////");
-}
-plexi();
+// function plexi()
+// {
+//     let result = 0;
+// 	for (let i = 0; i < data.cauldrons.winter_seasson.length; ++i)
+//     {    
+// 		if (data.cauldrons.winter_seasson[i].type == "Plexiglass")
+// 		{			
+//             result++;
+// 		}
+//     }
+//     console.log("8.- Mostrar el porcentaje de cauldrons de Plexiglass en winter_seasson");
+//     console.log("Cauldrons Plexiglass en winter_seasson: " + result);	
+//     var porcentaje = (result / data.cauldrons.winter_seasson.length)*100;
+//     console.log("Porcentaje de cauldrons Plexiglass en winter_seasson: " + porcentaje);
+//     var porcentaje2 = Math.round(porcentaje);
+//     console.log("Porcentaje de cauldrons Plexiglass en winter_seasson: " + porcentaje2);
+//     console.log("////////////////////////");
+// }
+// plexi();
 
 
-// // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
-function orangeWinterCauldrons()
-{
-    let total = 0;
- for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
- {
-        if(data.cauldrons.winter_seasson[i].color == "orange" || data.cauldrons.winter_seasson[i].damaged == false)
-        {    
-            total++; 
-        }
-    }
-    console.log("9.- Mostrar el número de cauldrons de color Orange en buen estado");
-    console.log("Cauldrons naranjas en buen estado de winter_seasson: " + total);
-}
-orangeWinterCauldrons();
+// // // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
+// function orangeWinterCauldrons()
+// {
+//     let total = 0;
+//  for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+//  {
+//         if(data.cauldrons.winter_seasson[i].color == "orange" || data.cauldrons.winter_seasson[i].damaged == false)
+//         {    
+//             total++; 
+//         }
+//     }
+//     console.log("9.- Mostrar el número de cauldrons de color Orange en buen estado");
+//     console.log("Cauldrons naranjas en buen estado de winter_seasson: " + total);
+// }
+// orangeWinterCauldrons();
 
 
-function orangeSummerCauldrons()
-{
-    let total = 0;
- for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
- {
-        if(data.cauldrons.summer_seasson[i].color == "orange" || data.cauldrons.summer_seasson[i].damaged == false)
-        {    
-            total++; 
-        }
-    }
-    console.log("Cauldrons naranjas en buen estado de summer_seasson: " + total);
-}
-orangeSummerCauldrons();
+// function orangeSummerCauldrons()
+// {
+//     let total = 0;
+//  for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+//  {
+//         if(data.cauldrons.summer_seasson[i].color == "orange" || data.cauldrons.summer_seasson[i].damaged == false)
+//         {    
+//             total++; 
+//         }
+//     }
+//     console.log("Cauldrons naranjas en buen estado de summer_seasson: " + total);
+// }
+// orangeSummerCauldrons();
 
 
-function orangeSpringCauldrons()
-{
-    let total = 0;
- for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
- {
-        if(data.cauldrons.spring_seasson[i].color == "orange" || data.cauldrons.spring_seasson[i].damaged == false)
-        {    
-            total++; 
-        }
-    }
-    console.log("Cauldrons naranjas en buen estado de spring_seasson: " + total);
-}
-orangeSpringCauldrons();
+// function orangeSpringCauldrons()
+// {
+//     let total = 0;
+//  for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+//  {
+//         if(data.cauldrons.spring_seasson[i].color == "orange" || data.cauldrons.spring_seasson[i].damaged == false)
+//         {    
+//             total++; 
+//         }
+//     }
+//     console.log("Cauldrons naranjas en buen estado de spring_seasson: " + total);
+// }
+// orangeSpringCauldrons();
 
 
-function orangeAutumnCauldrons()
-{
-    let total = 0;
- for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
- {
-        if(data.cauldrons.autumn_seasson[i].color == "orange" || data.cauldrons.autumn_seasson[i].damaged == false)
-        {    
-            total++; 
-        }
-    }
-    console.log("Cauldrons naranjas en buen estado de autumn_seasson: " + total);
-    console.log("/////////////////////////");
-}
-orangeAutumnCauldrons();
+// function orangeAutumnCauldrons()
+// {
+//     let total = 0;
+//  for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+//  {
+//         if(data.cauldrons.autumn_seasson[i].color == "orange" || data.cauldrons.autumn_seasson[i].damaged == false)
+//         {    
+//             total++; 
+//         }
+//     }
+//     console.log("Cauldrons naranjas en buen estado de autumn_seasson: " + total);
+//     console.log("/////////////////////////");
+// }
+// orangeAutumnCauldrons();
 
 
-// // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
+// // // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
-function posibleColors()
-{
-    const coloresWinter = [];
+// function posibleColors()
+// {
+//     const coloresWinter = [];
 
-    for(var i = 0; i < data.cauldrons.winter_seasson.length; i++) 
-    {
-        const colores = data.cauldrons.winter_seasson[i].color;
+//     for(var i = 0; i < data.cauldrons.winter_seasson.length; i++) 
+//     {
+//         const colores = data.cauldrons.winter_seasson[i].color;
  
-        if (!coloresWinter.includes(data.cauldrons.winter_seasson[i].color)) 
-        {
-            coloresWinter.push(colores);
-        }
-    }
-    // console.log("Posibles colores de winter_seasson: " + coloresWinter);
+//         if (!coloresWinter.includes(data.cauldrons.winter_seasson[i].color)) 
+//         {
+//             coloresWinter.push(colores);
+//         }
+//     }
+//     // console.log("Posibles colores de winter_seasson: " + coloresWinter);
     
-    const coloresSpring = [];
-    for(var i = 0; i < data.cauldrons.spring_seasson.length; i++) 
-    {
-        const colores = data.cauldrons.spring_seasson[i].color;
+//     const coloresSpring = [];
+//     for(var i = 0; i < data.cauldrons.spring_seasson.length; i++) 
+//     {
+//         const colores = data.cauldrons.spring_seasson[i].color;
  
-        if (!coloresSpring.includes(data.cauldrons.spring_seasson[i].color)) 
-        {
-            coloresSpring.push(colores);
-        }
-    }
-    // console.log("Posibles colores de spring_seasson: " + coloresSpring);
+//         if (!coloresSpring.includes(data.cauldrons.spring_seasson[i].color)) 
+//         {
+//             coloresSpring.push(colores);
+//         }
+//     }
+//     // console.log("Posibles colores de spring_seasson: " + coloresSpring);
 
-    const coloresSummer = [];
-    for(var i = 0; i < data.cauldrons.summer_seasson.length; i++) 
-    {
-        const colores = data.cauldrons.summer_seasson[i].color;
+//     const coloresSummer = [];
+//     for(var i = 0; i < data.cauldrons.summer_seasson.length; i++) 
+//     {
+//         const colores = data.cauldrons.summer_seasson[i].color;
  
-        if (!coloresSummer.includes(data.cauldrons.summer_seasson[i].color)) 
-        {
-            coloresSummer.push(colores);
-        }
-    }
-    // console.log("Posibles colores de summer_seasson: " + coloresSummer);
+//         if (!coloresSummer.includes(data.cauldrons.summer_seasson[i].color)) 
+//         {
+//             coloresSummer.push(colores);
+//         }
+//     }
+//     // console.log("Posibles colores de summer_seasson: " + coloresSummer);
 
-    const coloresAutumn = [];
-    for(var i = 0; i < data.cauldrons.autumn_seasson.length; i++) 
-    {
-        const colores = data.cauldrons.autumn_seasson[i].color;
+//     const coloresAutumn = [];
+//     for(var i = 0; i < data.cauldrons.autumn_seasson.length; i++) 
+//     {
+//         const colores = data.cauldrons.autumn_seasson[i].color;
  
-        if (!coloresAutumn.includes(data.cauldrons.autumn_seasson[i].color)) 
-        {
-            coloresAutumn.push(colores);
-        }
-    }
-    // console.log("Posibles colores de autumn_seasson: " + coloresAutumn);
-    const coloresPorTemporada = [coloresAutumn, coloresSpring, coloresSummer, coloresWinter];
-    const coloresUnicos = [];
+//         if (!coloresAutumn.includes(data.cauldrons.autumn_seasson[i].color)) 
+//         {
+//             coloresAutumn.push(colores);
+//         }
+//     }
+//     // console.log("Posibles colores de autumn_seasson: " + coloresAutumn);
+//     const coloresPorTemporada = [coloresAutumn, coloresSpring, coloresSummer, coloresWinter];
+//     const coloresUnicos = [];
 
-    for(var i = 0; i < coloresPorTemporada.length; i++) 
-    {
-        const colorU = coloresPorTemporada[i];
+//     for(var i = 0; i < coloresPorTemporada.length; i++) 
+//     {
+//         const colorU = coloresPorTemporada[i];
 
-        if (!coloresUnicos.includes(coloresPorTemporada[i])) {
-          coloresUnicos.push(colorU);
-        }
-    }
-    console.log("10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.");
-    console.log("Posibles colores sin repetir: " + coloresUnicos);
-    console.log(coloresPorTemporada);
-}
-posibleColors();
+//         if (!coloresUnicos.includes(coloresPorTemporada[i])) {
+//           coloresUnicos.push(colorU);
+//         }
+//     }
+//     console.log("10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.");
+//     console.log("Posibles colores sin repetir: " + coloresUnicos);
+//     console.log(coloresPorTemporada);
+// }
+// posibleColors();
 
 
