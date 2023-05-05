@@ -1016,7 +1016,7 @@ const cauldron = data.cauldrons.winter_seasson.concat(data.cauldrons.spring_seas
 
 // 1.- Mostrar la cantidad total de cauldrons
 
-function cauldronsC()
+function cauldronsQuantity()
 {
     
   let total = data.cauldrons.spring_seasson.length + data.cauldrons.summer_seasson.length + data.cauldrons.autumn_seasson.length + data.cauldrons.winter_seasson.length;
@@ -1025,7 +1025,7 @@ function cauldronsC()
     console.log("/////////////////////////////////////");
     
 }
-cauldronsC();
+cauldronsQuantity();
 
 // // 2- Mostrar la cantidad de cauldrons separados por temporada
 function winterCauldrons()
@@ -1116,7 +1116,7 @@ showSpringDamaged();
 
 // // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
-function showColorWinter()
+function showColorNaproxen()
 {
     console.log("4.- Mostrar el color de los cauldron con magic_description Naproxen");
 	for (let i = 0; i < cauldron.length; i++)
@@ -1128,7 +1128,7 @@ function showColorWinter()
         }
     }
 }
-showColorWinter();
+showColorNaproxen();
 
 
 // // // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
@@ -1150,55 +1150,18 @@ brokenWoodCauldron();
 
 // // // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
-// function brassiWinter()
-// {
-//     console.log("6.- Mostrar la Id y magic_description de los cauldron llamados Brassicaceae");		
-//     for (let i = 0; i < data.cauldrons.winter_seasson.length; i++)
-//     {  
-// 		if (data.cauldrons.winter_seasson[i].name == "Brassicaceae")
-// 		{	
-//             console.log("Id y magic_description de los cauldrons Brassicaceae de winter_seasson: " + data.cauldrons.winter_seasson[i].id + "  " + data.cauldrons.winter_seasson[i].magic_description);	 
-// 		}
-// 	}
-// }
-// brassiWinter();
-
-// function brassiSummer()
-// {
-//     for (let i = 0; i < data.cauldrons.summer_seasson.length; i++)
-//     {  
-// 		if (data.cauldrons.summer_seasson[i].name == "Brassicaceae")
-// 		{			
-//             console.log("Id y magic_description de los cauldrons Brassicaceae de summer_seasson: " + data.cauldrons.summer_seasson[i].id + "  " + data.cauldrons.summer_seasson[i].magic_description);	 
-// 		}
-// 	}
-// }
-// brassiSummer();
-
-// function brassiSpring()
-// {
-//     for (let i = 0; i < data.cauldrons.spring_seasson.length; i++)
-//     {  
-// 		if (data.cauldrons.spring_seasson[i].name == "Brassicaceae")
-// 		{			
-//             console.log("Id y magic_description de los cauldrons Brassicaceae de spring_seasson: " + data.cauldrons.spring_seasson[i].id + "  " + data.cauldrons.spring_seasson[i].magic_description);	 
-// 		}
-// 	}
-// }
-// brassiSpring();
-
-// function brassiAutumn()
-// {
-//     for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
-//     {  
-// 		if (data.cauldrons.autumn_seasson[i].name == "Brassicaceae")
-// 		{			
-//             console.log("Id y magic_description de los cauldrons Brassicaceae de autumn_seasson: " + data.cauldrons.autumn_seasson[i].id + "  " + data.cauldrons.autumn_seasson[i].magic_description);	 
-//         }
-// 	}
-//     console.log("//////////////////////////////////");
-// }
-// brassiAutumn();
+function brassiCauldronsIdAndDescription()
+{
+    console.log("6.- Mostrar la Id y magic_description de los cauldron llamados Brassicaceae");		
+    for (let i = 0; i < cauldron.length; i++)
+    {  
+		if (cauldron[i].name === "Brassicaceae")
+		{	
+            console.log("Id y magic_description de los cauldrons Brassicaceae : " + cauldron[i].id + "  " + cauldron[i].magic_description);	 
+		}
+	}
+}
+brassiCauldronsIdAndDescription();
 
 // // // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 // function porcentajeWinter()
