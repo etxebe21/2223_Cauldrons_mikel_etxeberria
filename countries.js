@@ -121,3 +121,19 @@ function globalAndFixedDates()
 
 }
 globalAndFixedDates();
+
+//Mostrar posibles countryCodes sin repetir
+function posibleCodes(){
+
+    const countryCodes = [];
+    for(let i = 0; i< date.length;i++)
+    {
+        const codes = date[i].countryCode;
+        if(!countryCodes.includes(date[i].countryCode))
+        {
+            countryCodes.push(codes);
+        }
+    }
+    console.log("Posibles countryCodes unicos: " + countryCodes);
+}
+posibleCodes();    

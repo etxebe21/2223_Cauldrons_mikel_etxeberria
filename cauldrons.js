@@ -1158,9 +1158,9 @@ function brassiCauldronsIdAndDescription()
 		if (cauldron[i].name === "Brassicaceae")
 		{	
             console.log("Id y magic_description de los cauldrons Brassicaceae : " + cauldron[i].id + "  " + cauldron[i].magic_description);	
-            console.log("///////////////////////////////"); 
 		}
 	}
+    console.log("///////////////////////////////");
 }
 brassiCauldronsIdAndDescription();
 
@@ -1282,71 +1282,21 @@ orangeGoodCauldrons();
 
 // // // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
-// function posibleColors()
-// {
-//     const coloresWinter = [];
+function posibleColors()
+{
+    const coloresUnicos = [];
 
-//     for(var i = 0; i < data.cauldrons.winter_seasson.length; i++) 
-//     {
-//         const colores = data.cauldrons.winter_seasson[i].color;
- 
-//         if (!coloresWinter.includes(data.cauldrons.winter_seasson[i].color)) 
-//         {
-//             coloresWinter.push(colores);
-//         }
-//     }
-//     // console.log("Posibles colores de winter_seasson: " + coloresWinter);
-    
-//     const coloresSpring = [];
-//     for(var i = 0; i < data.cauldrons.spring_seasson.length; i++) 
-//     {
-//         const colores = data.cauldrons.spring_seasson[i].color;
- 
-//         if (!coloresSpring.includes(data.cauldrons.spring_seasson[i].color)) 
-//         {
-//             coloresSpring.push(colores);
-//         }
-//     }
-//     // console.log("Posibles colores de spring_seasson: " + coloresSpring);
+    for(var i = 0; i < cauldron.length; i++) 
+    {
+        const colorU = cauldron[i].color;
 
-//     const coloresSummer = [];
-//     for(var i = 0; i < data.cauldrons.summer_seasson.length; i++) 
-//     {
-//         const colores = data.cauldrons.summer_seasson[i].color;
- 
-//         if (!coloresSummer.includes(data.cauldrons.summer_seasson[i].color)) 
-//         {
-//             coloresSummer.push(colores);
-//         }
-//     }
-//     // console.log("Posibles colores de summer_seasson: " + coloresSummer);
-
-//     const coloresAutumn = [];
-//     for(var i = 0; i < data.cauldrons.autumn_seasson.length; i++) 
-//     {
-//         const colores = data.cauldrons.autumn_seasson[i].color;
- 
-//         if (!coloresAutumn.includes(data.cauldrons.autumn_seasson[i].color)) 
-//         {
-//             coloresAutumn.push(colores);
-//         }
-//     }
-//     // console.log("Posibles colores de autumn_seasson: " + coloresAutumn);
-//     const coloresPorTemporada = [coloresAutumn, coloresSpring, coloresSummer, coloresWinter];
-//     const coloresUnicos = [];
-
-//     for(var i = 0; i < coloresPorTemporada.length; i++) 
-//     {
-//         const colorU = coloresPorTemporada[i];
-
-//         if (!coloresUnicos.includes(coloresPorTemporada[i])) {
-//           coloresUnicos.push(colorU);
-//         }
-//     }
-//     console.log("10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.");
-//     console.log("Posibles colores sin repetir: " + coloresUnicos);
-//     console.log(coloresPorTemporada);
-// }
-// posibleColors();
+        if (!coloresUnicos.includes(colorU)) {
+          coloresUnicos.push(colorU);
+        }
+    }
+    console.log("10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.");
+    console.log("Posibles colores sin repetir: " + coloresUnicos);
+}
+posibleColors();
 
 
