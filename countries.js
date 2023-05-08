@@ -19,7 +19,7 @@ const data = {
 "counties":["US-TX"],"launchYear":null,"type":"Optional"},
 
 {"date":"2020-05-25","localName":"Memorial Day","name":"Memorial Day","countryCode":"US","fixed":false,"global":true,
-"counties":null,"launchYear":null,"type":"Public"},
+"counties":null,"launchYear":null,"type":"Optional"},
 
 {"date":"2020-07-03","localName":"Independence Day","name":"Independence Day","countryCode":"EU","fixed":false,"global":true,
 "counties":null,"launchYear":null,"type":"Public"},
@@ -38,7 +38,7 @@ const data = {
 "counties":null,"launchYear":1863,"type":"Public"},
 
 {"date":"2020-12-25","localName":"Christmas Day","name":"Christmas Day","countryCode":"EU","fixed":false,"global":true,
-"counties":null,"launchYear":null,"type":"Public"}]
+"counties":null,"launchYear":null,"type":"Optional"}]
     }
 }
 
@@ -136,4 +136,74 @@ function posibleCodes(){
     }
     console.log("Posibles countryCodes unicos: " + countryCodes);
 }
-posibleCodes();    
+posibleCodes();   
+
+//Mostrar porcentaje de type public en general y por cuatrimestre
+
+function typePublicPercentaje()
+{
+    let total = 0;
+    for (let i = 0; i < date.length; i++)
+    {
+        if(date[i].type === "Public")
+        total++;
+    }
+    // console.log("Type Public en total: " + total);
+    var porcentaje = (total/date.length)*100;
+    // console.log("Porcentaje de type public: " + porcentaje);
+    var porcentajeTotal = Math.round(porcentaje);
+    console.log("Porcentaje total: " + porcentajeTotal);
+}
+typePublicPercentaje();
+
+function typePublicPercentajePorCuatrimestre()
+{
+    let primero = 0;
+    for (let i = 0; i < data.dates.primero.length; i++)
+    {
+        if(data.dates.primero[i].type === "Public")
+        primero++;
+    }
+    // console.log("Type Public en total: " + total);
+    var porcentaje = (primero/data.dates.primero.length)*100;
+    // console.log("Porcentaje de type public: " + porcentaje);
+    var porcentajeTotal = Math.round(porcentaje);
+    console.log("Porcentaje primero: " + porcentajeTotal);
+
+    let segundo = 0;
+    for (let i = 0; i < data.dates.segundo.length; i++)
+    {
+        if(data.dates.segundo[i].type === "Public")
+        segundo++;
+    }
+    // console.log("Type Public en total: " + total);
+    var porcentaje = (segundo/data.dates.segundo.length)*100;
+    // console.log("Porcentaje de type public: " + porcentaje);
+    var porcentajeTotal = Math.round(porcentaje);
+    console.log("Porcentaje segundo: " + porcentajeTotal)
+
+    let tercero = 0;
+    for (let i = 0; i < data.dates.tercero.length; i++)
+    {
+        if(data.dates.tercero[i].type === "Public")
+        tercero++;
+    }
+    // console.log("Type Public en total: " + total);
+    var porcentaje = (tercero/data.dates.tercero.length)*100;
+    // console.log("Porcentaje de type public: " + porcentaje);
+    var porcentajeTotal = Math.round(porcentaje);
+    console.log("Porcentaje segundo: " + porcentajeTotal)
+}
+typePublicPercentajePorCuatrimestre();
+
+//Mostrar datos de localName = Good Friday
+
+function goodFridayData()
+{
+    for(let i = 0; i< date.length; i++)
+    {
+        if(date[i].localName === "Good Friday")
+        console.log("Datos de Good Friday: " + date[i]);
+    }
+}
+goodFridayData();
